@@ -4,4 +4,10 @@
     <string name="share">Share</string>
     <string name="rate">Rate</string>
     <string name="feedback">Feedback</string>
+    <string-array name="tabs">
+        <item>Security</item>
+        <item>Settings</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
