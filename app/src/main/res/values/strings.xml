@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Safe Box</string>
+    <string name="title_activity_dbactivity">DBActivity</string>
+    <string name="share">Share</string>
+    <string name="rate">Rate</string>
+    <string name="feedback">Feedback</string>
+</resources>
