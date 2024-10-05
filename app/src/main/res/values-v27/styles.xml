@@ -27,7 +27,7 @@
         <item name="tabPaddingStart">16dp</item>
         <item name="tabPaddingEnd">16dp</item>
         <item name="tabGravity">center</item>
-        <item name="tabBackground">@color/background</item>
+        <item name="tabBackground">@android:color/transparent</item>
         <item name="tabTextAppearance">@style/TabTextAppearance</item>
         <item name="tabSelectedTextColor">@color/text_white</item>
     </style>
