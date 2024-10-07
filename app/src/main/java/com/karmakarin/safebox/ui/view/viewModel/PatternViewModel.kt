@@ -21,12 +21,11 @@ import javax.inject.Inject
 class PatternViewModel @Inject constructor(private val patternDao: PatternDao) : ViewModel() {
 
     private val _patternEventLiveData = MutableLiveData<PatternViewState>()
+    val getPatternEventLiveData: LiveData<PatternViewState> = _patternEventLiveData
 
     init {
         _patternEventLiveData.value = PatternViewState(PatternEvent.INITIALIZE)
     }
-
-    val getPatternEventLiveDataa: LiveData<PatternViewState> = _patternEventLiveData
 
     // Pattern data
     private val firstDrawnPattern = mutableListOf<PatternLockView.Dot>()

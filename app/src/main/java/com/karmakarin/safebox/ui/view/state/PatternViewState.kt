@@ -1,10 +1,12 @@
 package com.karmakarin.safebox.ui.view.state
 
 import android.content.Context
+import androidx.annotation.Keep
 import com.karmakarin.safebox.R
 import com.karmakarin.safebox.support.patterns.PatternEvent
 
 
+@Keep
 data class PatternViewState(val patternEvent: PatternEvent) {
 
     fun getPromptText(context: Context): String =
