@@ -8,6 +8,18 @@
         <item>Security</item>
         <item>Settings</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!--    Pattern-->
+    <string name="message_pattern_dot_added">Dot added to pattern</string>
+    <string name="message_pattern_started">Pattern drawing started</string>
+    <string name="message_pattern_detected">Pattern drawing completed</string>
+    <string name="message_pattern_cleared">Pattern cleared</string>
+    <string name="draw_pattern_title">Create a new pattern</string>
+    <string name="redraw_pattern_title">Redraw to complete</string>
+    <string name="recreate_pattern_error">Pattern does not match. Redraw.</string>
+    <string name="create_pattern_successful">Successfully created.</string>
+    <string name="overlay_prompt_pattern_title">Draw pattern to open app</string>
+    <string name="overlay_prompt_pattern_title_wrong">Wrong pattern. Draw again.</string>
+    <string name="overlay_prompt_pattern_title_correct">Pattern correct.</string>
+
 </resources>

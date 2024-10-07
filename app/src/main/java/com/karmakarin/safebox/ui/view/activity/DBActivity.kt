@@ -10,6 +10,7 @@ import com.karmakarin.safebox.R
 import com.karmakarin.safebox.databinding.ActivityDashboardBinding
 import com.karmakarin.safebox.ui.view.adapter.DashboardAdapter
 import com.karmakarin.safebox.ui.view.viewModel.DashboardViewModel
+import com.karmakarin.safebox.util.Constants
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -37,16 +38,16 @@ class DBActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activity_dash
         dashboardVM.getPatternCreationNeedLiveData.observe(this) { isPatternCreateNeed ->
             when {
                 isPatternCreateNeed -> {
-//                    startActivityForResult(
-//                        CreateNewPatternActivity.newIntent(this),
-//                        RC_CREATE_PATTERN
-//                    )
+                    startActivityForResult(
+                        PatternActivity.newIntent(this),
+                        Constants.CREATE_PATTERN
+                    )
                 }
 
                 dashboardVM.isAppLaunchValidated().not() -> {
 //                    startActivityForResult(
 //                        OverlayValidationActivity.newIntent(this, this.packageName),
-//                        RC_VALIDATE_PATTERN
+//                        Constants.VALIDATE_PATTERN
 //                    )
                 }
             }

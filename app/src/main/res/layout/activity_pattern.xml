@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewState"
+            type="com.karmakarin.safebox.ui.view.state.PatternViewState" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".ui.view.activity.PatternActivity">
+
+        <include
+            android:id="@+id/inCircle"
+            layout="@layout/lock_circle_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvViewHint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvViewHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp30"
+            android:gravity="center"
+            android:text="@{viewState.getPromptText(context)}"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/txt_size_18"
+            app:layout_constraintBottom_toTopOf="@+id/ptView"
+            app:layout_constraintEnd_toEndOf="@+id/ptView"
+            app:layout_constraintStart_toStartOf="@+id/ptView"
+            tools:ignore="MissingConstraints" />
+
+        <com.karmakarin.safebox.support.patterns.PatternLockView
+            android:id="@+id/ptView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_marginEnd="@dimen/dp30"
+            android:layout_marginBottom="@dimen/dp30"
+            app:aspectRatio="square"
+            app:dotNormalSize="16dp"
+            app:dotSelectedSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:pathWidth="6dp"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
