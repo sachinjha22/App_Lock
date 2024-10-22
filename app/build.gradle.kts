@@ -110,4 +110,9 @@ dependencies {
 
     // OkHttp (for Retrofit)
     implementation(libs.okhttp.logging.interceptor)
+
+    // or
+    implementation(files("lib/Samsung_Fingerprint_Sdk-v1.0.0.jar"))
+    implementation(files("lib/Samsung_Fingerprint_Pass-v1.2.6.jar"))
+    implementation(files("lib/MeiZu_Fingerprint.jar"))
 }

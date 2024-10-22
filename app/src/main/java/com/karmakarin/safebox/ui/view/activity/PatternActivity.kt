@@ -24,17 +24,18 @@ class PatternActivity : BaseActivity<ActivityPatternBinding>(R.layout.activity_p
     }
 
     private fun setUpUI() {
-        binding.ptView.addPatternLockListener(object : PatternListeners() {
-            override fun onComplete(pattern: MutableList<PatternLockView.Dot>?) {
-                if (patternVM.isFirstPattern()) {
-                    patternVM.setFirstDrawnPattern(pattern)
-                } else {
-                    patternVM.setRedrawnPattern(pattern)
-                }
-                binding.ptView.clearPattern()
-            }
-        })
         try {
+            binding.ptView.addPatternLockListener(object : PatternListeners() {
+                override fun onComplete(pattern: MutableList<PatternLockView.Dot>?) {
+                    if (patternVM.isFirstPattern()) {
+                        patternVM.setFirstDrawnPattern(pattern)
+                    } else {
+                        patternVM.setRedrawnPattern(pattern)
+                    }
+                    binding.ptView.clearPattern()
+                }
+            })
+
             patternVM.getPatternEventLiveData.observe(this) { viewState ->
                 binding.viewState = viewState
                 binding.executePendingBindings()
@@ -43,7 +44,7 @@ class PatternActivity : BaseActivity<ActivityPatternBinding>(R.layout.activity_p
                 }
             }
         } catch (e: Exception) {
-            Log.d("VVV", "error ${e.message}")
+            e.printStackTrace()
         }
     }
 

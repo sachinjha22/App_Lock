@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewState"
+            type="com.karmakarin.safebox.ui.view.state.OverlayViewState" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/layoutOverlayMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/adContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp70"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/textViewPrompt"
+            android:layout_below="@+id/adContainer">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/avatarLock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:maxWidth="@dimen/dp100"
+                android:maxHeight="@dimen/dp100"
+                app:srcCompat="@drawable/ic_eye_lock" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:adjustViewBounds="true"
+                android:maxWidth="@dimen/dp100"
+                android:maxHeight="@dimen/dp100"
+                android:padding="@dimen/dp16"
+                android:scaleType="fitXY"
+                android:visibility="@{viewState.fingerPrintIconVisibility}"
+                app:srcCompat="@drawable/ic_finger_print" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/patternLockView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp32"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp32"
+            android:layout_marginBottom="@dimen/dp16"
+            android:gravity="center"
+            android:text="@{viewState.getPromptMessage(context)}"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/txt_size_18" />
+
+        <com.karmakarin.safebox.support.patterns.PatternLockView
+            android:id="@+id/patternLockView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dp32"
+            app:aspectRatio="square"
+            app:dotNormalSize="16dp"
+            app:dotSelectedSize="24dp"
+            app:inStealthMode="@{viewState.isHiddenDrawingMode}"
+            app:pathWidth="6dp" />
+
+
+    </RelativeLayout>
+
+</layout>

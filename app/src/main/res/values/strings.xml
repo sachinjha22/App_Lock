@@ -9,7 +9,7 @@
         <item>Settings</item>
     </string-array>
 
-<!--    Pattern-->
+    <!--    Pattern-->
     <string name="message_pattern_dot_added">Dot added to pattern</string>
     <string name="message_pattern_started">Pattern drawing started</string>
     <string name="message_pattern_detected">Pattern drawing completed</string>
@@ -21,5 +21,11 @@
     <string name="overlay_prompt_pattern_title">Draw pattern to open app</string>
     <string name="overlay_prompt_pattern_title_wrong">Wrong pattern. Draw again.</string>
     <string name="overlay_prompt_pattern_title_correct">Pattern correct.</string>
+
+    <!--    overlay-->
+    <string name="overlay_prompt_fingerprint_title">Draw pattern to open app</string>
+    <string name="overlay_prompt_fingerprint_title_wrong">Not matched. %1$s left.</string>
+    <string name="overlay_prompt_fingerprint_title_correct">Fingerprint matched!</string>
+    <string name="overlay_prompt_fingerprint_title_error">Fingerprint error! Try pattern.</string>
 
 </resources>
