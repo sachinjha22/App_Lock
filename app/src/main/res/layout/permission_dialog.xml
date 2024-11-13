@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@color/app_color"
+            android:orientation="horizontal" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="Permission Needed"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/txt_size_18"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp32"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp32"
+            android:gravity="center"
+            android:text="You need to permit the permission"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/txt_size_18"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp16"
+            android:paddingBottom="@dimen/dp16">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp32"
+                android:paddingTop="@dimen/dp16"
+                android:paddingRight="@dimen/dp32"
+                android:paddingBottom="@dimen/dp16"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/txt_size_16" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonPermit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp16"
+                android:backgroundTint="@color/colorPrimary"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp32"
+                android:paddingTop="@dimen/dp16"
+                android:paddingRight="@dimen/dp32"
+                android:paddingBottom="@dimen/dp16"
+                android:text="Permit"
+                android:textAllCaps="false"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/txt_size_16"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

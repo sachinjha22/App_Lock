@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewState"
+            type="com.karmakarin.safebox.ui.view.state.AppLockItemHeaderViewState" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16"
+            android:singleLine="true"
+            android:text="@{viewState.headerTextResource}"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/txt_size_16" />
+
+    </LinearLayout>
+</layout>

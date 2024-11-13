@@ -18,7 +18,7 @@ import com.karmakarin.safebox.util.extensions.convertToPatternDot
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class OverlayValidationActivity :
+class OVActivity :
     BaseActivity<ActivityOverlayValidationBinding>(R.layout.activity_overlay_validation) {
 
     private val overlayVM by viewModels<OverlayViewModel>()
@@ -100,7 +100,7 @@ class OverlayValidationActivity :
 
     companion object {
         fun newIntent(context: Context, packageName: String): Intent {
-            val intent = Intent(context, OverlayValidationActivity::class.java)
+            val intent = Intent(context, OVActivity::class.java)
             intent.putExtra(KEY_PACKAGE_NAME, packageName)
             return intent
         }

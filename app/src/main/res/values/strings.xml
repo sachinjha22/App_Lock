@@ -27,5 +27,8 @@
     <string name="overlay_prompt_fingerprint_title_wrong">Not matched. %1$s left.</string>
     <string name="overlay_prompt_fingerprint_title_correct">Fingerprint matched!</string>
     <string name="overlay_prompt_fingerprint_title_error">Fingerprint error! Try pattern.</string>
+    <string name="header_recommended_to_lock">Recommended to lock</string>
+    <string name="header_all_apps">All applications</string>
+    <string name="app_security_description">Recommended to lock app</string>
 
 </resources>

@@ -42,14 +42,14 @@ class DBActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activity_dash
             when {
                 isPatternCreateNeed -> {
                     startActivityForResult(
-                        PatternActivity.newIntent(this),
+                        PActivity.newIntent(this),
                         Constants.CREATE_PATTERN
                     )
                 }
 
                 dashboardVM.isAppLaunchValidated().not() -> {
                     startActivityForResult(
-                        OverlayValidationActivity.newIntent(this, this.packageName),
+                        OVActivity.newIntent(this, this.packageName),
                         Constants.VALIDATE_PATTERN
                     )
                 }

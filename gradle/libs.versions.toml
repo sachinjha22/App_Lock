@@ -55,6 +55,9 @@ okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-i
 androidx-databinding-runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "databindingRuntime" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+play-services-identity-credentials = { group = "com.google.android.gms", name = "play-services-identity-credentials", version = "16.0.0-alpha03" }
+
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version = "1.8.1" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

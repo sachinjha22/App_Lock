@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewState"
+            type="com.karmakarin.safebox.ui.view.state.AppLockItemItemViewState" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/ivAppIcon"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp16"
+            app:setImageDrawable="@{viewState.getAppIcon()}" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imageViewLock"
+            android:layout_toEndOf="@+id/ivAppIcon"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp16"
+            android:paddingBottom="@dimen/dp16">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@{viewState.appName}"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/txt_size_16" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                android:singleLine="true"
+                android:text="@string/app_security_description"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/txt_size_12" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp16"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/dp16"
+            app:setImageDrawable="@{viewState.getLockIcon(context)}" />
+
+    </RelativeLayout>
+</layout>
